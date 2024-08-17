@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ошибка 404 - Страница не найдена</title>
+
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Подключение вашего стиля -->
+    <link rel="icon" href="{% static 'images/favicon.ico' type="image/x-ico" %}>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_404.css' %}">
+</head>
+
+<body>
+    <section class="error-404-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <div class="error">
+                        <img src="{% static 'images/error404.png' %}" alt='Error 404'>
+                    </div>
+                    <div class="error-message">
+                        <h3>Ой! Страница не найдена!</h3>
+                        <p>К сожалению, мы не можем найти запрошенную вами страницу. Возможно, вы неправильно ввели адрес.</p>
+                        <a href="javascript:history.go(-1)" class="btn btn-primary">Вернуться назад</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подключение Bootstrap JS (необходимо для работы Bootstrap компонентов) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

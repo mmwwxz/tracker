@@ -1,0 +1,16 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Главная страница</h1>
+    <div class="mb-2">
+        <a href="{% url 'record_list' %}" class="btn btn-primary m-2">ФАБРИКА (пошив)</a>
+        <a href="{% url 'expenses_list' %}" class="btn btn-primary m-2">РАСХОДЫ (ткань, пошив, фурнитура)</a>
+    </div>
+</div>
+{% endblock %}
