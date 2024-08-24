@@ -53,7 +53,7 @@
     <a href="{% url 'add_record' %}" class="btn btn-outline-primary color-green">Создать</a>
     <a href="{% url 'export_records' %}?name_filter={{ name_filter }}&model_filter={{ model_filter }}&date_filter_start={{ date_filter_start }}&date_filter_end={{ date_filter_end }}"
        class="btn btn-success m-2">
-        <img style="width: 25px; height: 25px !important;" src="{% static 'images/Excel.png' alt='excel' %}">
+        <img style="width: 25px; height: 25px !important;" src="{% static 'Excel.png' alt='excel' %}">
         Экспорт Excel
     </a>
     <a href="{% url 'delete_all_records' %}" class="btn btn-danger m-2" onclick="return confirm('Вы уверены, что хотите удалить все записи?');">Удалить всё</a>

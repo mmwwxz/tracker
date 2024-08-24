@@ -2,26 +2,16 @@
 <html lang="en">
 <head>
     {% load static %}
-    {% load bootstrap5 %}
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="{% static 'favicon.ico'  %}" type="image/x-ico">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% block extra_head %}{% endblock %}
     <title>{% block title %}Production Records{% endblock %}</title>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-    <!-- Bootstrap CSS -->
-    {% bootstrap_css %}
-
-    <!-- Bootstrap Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-
-    <!-- Custom Styles -->
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-
-    <!-- Optional: Add other meta tags, stylesheets, or scripts here -->
 </head>
 <body>
 <style>
@@ -51,7 +41,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{% url 'home' %}">
-           <img style="width: 100px; !important;" src="{% static 'images/tracker.svg' %}" alt="Лого">
+           <img style="width: 100px; !important;" src="../static/tracker.svg" alt="Лого">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +62,8 @@
 
 <!-- Main Content -->
 <div class="container mt-5">
-    {% block content %}{% endblock %}
+    {% block content %}
+    {% endblock %}
 </div>
 
 
